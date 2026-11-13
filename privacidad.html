@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad — InWisp</title>
+<meta name="description" content="Política de privacidad de InWisp, herramienta privada de respaldo de configuraciones de routers MikroTik.">
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    color: #1c2733;
+    background: #f6f7f9;
+  }
+  header { background: #0b6e4f; color: #fff; padding: 2.2rem 1.2rem 1.8rem; }
+  header .wrap { max-width: 46rem; margin: 0 auto; }
+  header h1 { margin: 0 0 .35rem; font-size: 1.7rem; }
+  header p { margin: 0; opacity: .92; }
+  main { max-width: 46rem; margin: 0 auto; padding: 1.8rem 1.2rem 2.5rem; background: #fff; }
+  h2 { font-size: 1.12rem; margin: 1.9rem 0 .5rem; color: #0b6e4f; }
+  h3 { font-size: 1rem; margin: 1.2rem 0 .3rem; }
+  p, li { margin: .5rem 0; }
+  ul { padding-left: 1.2rem; }
+  code { background: #eef1f4; padding: .1rem .35rem; border-radius: 4px; font-size: .92em; }
+  a { color: #0a5c43; }
+  .box {
+    border-left: 4px solid #0b6e4f;
+    background: #f2f8f5;
+    padding: .8rem 1rem;
+    margin: 1.2rem 0;
+    border-radius: 0 6px 6px 0;
+  }
+  footer { max-width: 46rem; margin: 0 auto; padding: 1.2rem; font-size: .85rem; color: #5b6b7a; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #11161c; color: #e6eaee; }
+    main { background: #1a2128; }
+    h2 { color: #63d3a6; }
+    code { background: #232d36; }
+    a { color: #7fe0b8; }
+    .box { background: #16241d; border-left-color: #63d3a6; }
+    footer { color: #9aa7b4; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Política de privacidad de InWisp</h1>
+    <p>Aplicación privada de respaldo de configuraciones de routers</p>
+  </div>
+</header>
+
+<main>
+  <h2>1. Responsable</h2>
+  <p>
+    InWisp es una aplicación de uso personal operada por el administrador de la red
+    donde se ejecuta (<a href="mailto:alexcam721@gmail.com">alexcam721@gmail.com</a>).
+    No es un servicio ofrecido al público: el único usuario es el propio titular de
+    la cuenta de Google que autoriza el acceso.
+  </p>
+
+  <h2>2. Qué datos se tratan</h2>
+  <ul>
+    <li>
+      <strong>Archivos de respaldo de routers</strong> (ficheros <code>.rsc</code>).
+      Se generan en los equipos del administrador y se copian a Google Drive sin
+      inspeccionar su contenido.
+    </li>
+    <li>
+      <strong>Credenciales OAuth</strong> del titular de la cuenta, guardadas
+      exclusivamente en el equipo donde corre la aplicación, con permisos
+      restringidos (<code>0600</code>).
+    </li>
+  </ul>
+  <p>
+    No se recogen datos personales de terceros, no se usan cookies, no hay
+    analítica, ni publicidad, ni perfilado.
+  </p>
+
+  <h2>3. Uso de la información de las APIs de Google</h2>
+  <div class="box">
+    <p>
+      InWisp solicita el permiso <code>https://www.googleapis.com/auth/drive</code>
+      con una única finalidad: <strong>crear y consultar archivos dentro de una
+      carpeta de respaldos del propio Drive del titular</strong>.
+    </p>
+    <p>
+      El uso que InWisp hace de la información recibida de las APIs de Google se
+      ajusta a la
+      <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Política
+      de datos de usuario de los servicios de API de Google</a>, incluidos los
+      requisitos de <strong>uso limitado (Limited Use)</strong>.
+    </p>
+  </div>
+  <ul>
+    <li>Los datos no se venden ni se alquilan.</li>
+    <li>No se comparten con terceros ni con anunciantes.</li>
+    <li>No se usan para publicidad, perfilado ni para entrenar modelos.</li>
+    <li>No se leen archivos ajenos a la carpeta de respaldos.</li>
+    <li>No se transfieren a servidores propios: la aplicación se conecta directamente a la API de Google.</li>
+  </ul>
+
+  <h2>4. Almacenamiento y conservación</h2>
+  <p>
+    Las copias permanecen en el Drive del titular y en el almacenamiento local del
+    equipo donde corre la aplicación. El titular puede borrarlas en cualquier
+    momento desde su propio Drive o desde el equipo; InWisp no guarda copias
+    adicionales en ningún otro sitio.
+  </p>
+
+  <h2>5. Terceros</h2>
+  <p>
+    El único proveedor implicado es Google (Google Drive), como destino del
+    respaldo. No se usan servicios de análisis, CDN, fuentes externas ni
+    publicidad.
+  </p>
+
+  <h2>6. Seguridad</h2>
+  <ul>
+    <li>El token de acceso se guarda cifrado en tránsito y con permisos de archivo restringidos.</li>
+    <li>Todo el tráfico con Google va por HTTPS.</li>
+    <li>La aplicación no expone puertos a internet ni ejecuta un servidor web accesible.</li>
+  </ul>
+
+  <h2>7. Revocación del acceso y eliminación de datos</h2>
+  <p>
+    El titular puede revocar el permiso en cualquier momento desde
+    <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a>.
+    Al revocarlo, la aplicación deja de poder acceder a su Drive de inmediato. Para
+    solicitar el borrado de cualquier dato asociado a la aplicación, basta con
+    escribir al correo de contacto indicado abajo.
+  </p>
+
+  <h2>8. Cambios en esta política</h2>
+  <p>
+    Si cambia el alcance del acceso solicitado, se actualizará esta página y su
+    fecha de revisión.
+  </p>
+
+  <h2>9. Contacto</h2>
+  <p>
+    <a href="mailto:alexcam721@gmail.com">alexcam721@gmail.com</a>
+  </p>
+
+  <p style="margin-top:1.6rem"><a href="index.html">← Volver a la página principal</a></p>
+</main>
+
+<footer>
+  Última actualización: 13 de noviembre de 2026.
+</footer>
+</body>
+</html>
